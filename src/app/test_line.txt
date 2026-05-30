@@ -1,0 +1,1 @@
+                          <p className="section-desc text-[18px] not-italic font-normal leading-[120%] font-bariol text-[#191D3C]">Select a property to see available room types</p>

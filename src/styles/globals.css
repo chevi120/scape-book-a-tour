@@ -1,0 +1,431 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --font-family-body: 'Bariol Regular', 'Bariol', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family-heading: 'Bariol Regular', 'Bariol', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family-button: 'GT Pressura Pro Regular', 'GT Pressura Pro', sans-serif;
+  
+  /* Scape Brand Colors - Official Palette */
+  --scape-big-apple: #ff007f;
+  --scape-dawn: #F58C34;
+  --scape-neon: #FF007F;
+  --scape-reef: #00B7BD;
+  --scape-ocean: #242A56;
+  --scape-shamrock: #055755;
+  --scape-harbour: #397CC0;
+  --scape-mist: #B2DDE7;
+  --scape-salt: #EFDDEE;
+  --scape-bubblegum: #FAA70AB;
+  --scape-fern: #79BE76;
+  --scape-zest: #FFF162;
+  --scape-dusk: #814496;
+  
+  --background: #ffffff;
+  --foreground: var(--scape-ocean);
+  --card: #ffffff;
+  --card-foreground: var(--scape-ocean);
+  --popover: #ffffff;
+  --popover-foreground: var(--scape-ocean);
+  --primary: var(--scape-big-apple);
+  --primary-foreground: #ffffff;
+  --secondary: var(--scape-reef);
+  --secondary-foreground: #ffffff;
+  --muted: #F9FAFB;
+  --muted-foreground: #5A6370;
+  --accent: #FFF5F6;
+  --accent-foreground: var(--scape-big-apple);
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: #E5E7EB;
+  --input: transparent;
+  --input-background: #FAFBFC;
+  --switch-background: #D1D5DB;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --ring: var(--scape-big-apple);
+  --chart-1: var(--scape-big-apple);
+  --chart-2: var(--scape-reef);
+  --chart-3: var(--scape-harbour);
+  --chart-4: var(--scape-dusk);
+  --chart-5: var(--scape-dawn);
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: var(--scape-ocean);
+  --sidebar-primary: var(--scape-big-apple);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #F9FAFB;
+  --sidebar-accent-foreground: var(--scape-ocean);
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: var(--scape-big-apple);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Bariol Regular', 'Bariol', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
+    h1 {
+      font-family: var(--font-family-heading);
+      font-size: var(--text-2xl);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--scape-ocean);
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-family: var(--font-family-heading);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--scape-ocean);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: var(--font-family-heading);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--scape-ocean);
+      letter-spacing: -0.01em;
+    }
+
+    h4 {
+      font-family: var(--font-family-heading);
+      font-size: var(--text-base);
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--scape-ocean);
+    }
+
+    p {
+       
+    }
+
+    label {
+      font-family: 'Bariol Regular', 'Bariol', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      font-size: var(--text-base);
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.5;
+      color: var(--scape-ocean);
+    }
+
+    button {
+      font-family: 'GT Pressura Pro Regular', 'GT Pressura Pro', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+
+    input, textarea, select {
+      font-family: 'Bariol Regular', 'Bariol', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      font-size: var(--text-base);
+      font-weight: 400;
+      font-style: normal;
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Primary Button Styles */
+.primary-button,
+.primary-button:link,
+.primary-button:visited {
+  color: #ff007f !important;
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 2px solid #ff007f !important;
+  text-decoration: none !important;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background: #FFF162 !important;
+  border-color: #ff007f !important;
+  color: #ff007f !important;
+}
+
+.primary-button::before,
+.primary-button::after {
+  content: none !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+.primary-button {
+  --btn-bg: #ffffff;
+  --btn-bg-hover: #FFF162;
+  --btn-color: #ff007f;
+}
+
+/* Smooth Scrolling for Dialogs and Modals */
+[data-slot="dialog-content"] {
+  scroll-behavior: smooth;
+}
+
+/* Better scroll behavior for mobile */
+@supports (-webkit-overflow-scrolling: touch) {
+  [data-slot="dialog-content"] {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Custom scrollbar styling for property details */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Heading and Title Typography - GT Pressura Pro */
+.book-tour-title {
+  font-family: 'GT Pressura Pro Bold', 'GT Pressura Pro', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.gt-pressura-title {
+  font-family: 'GT Pressura Pro Regular', 'GT Pressura Pro', sans-serif !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Button Typography - GT Pressura Pro */
+.gt-pressura-button {
+  font-family: 'GT Pressura Pro Regular', 'GT Pressura Pro', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Date Picker Button - Bariol Font */
+.date-picker-button {
+  font-family: 'Bariol Regular', 'Bariol', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  font-size: 16px !important;
+  letter-spacing: normal !important;
+}
+
+/* Font Pressura Bold Utility Class */
+.font-pressura {
+  font-family: 'GT Pressura Pro Bold', 'GT Pressura Pro', sans-serif !important;
+}
+
+/* Font Bariol Utility Class */
+.font-bariol {
+  font-family: 'Bariol Regular', 'Bariol', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
+}
+
+/* Focus Yellow Shadow Utility */
+.focus\:shadow-focus-yellow:focus {
+  box-shadow: 0px 0px 10px 2px #FFBA26 !important;
+}
+
+/* Banner Text Animation */
+@keyframes fillText {
+  0% {
+    background-size: 0 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.highlight {
+  line-height: 1.7;
+}
+
+.highlight span {
+  animation: fillText .8s ease-out forwards;
+  background-image: linear-gradient(#fff162, #fff162);
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  color: var(--Secondary-Neon, #ff007f);
+  display: inline;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+.banner-desc {
+  background-image: linear-gradient(#fff162, #fff162);
+  color: var(--Secondary-Neon, #ff007f);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  padding: 8px 16px;
+}
+
+.banner-desc,
+.heading-highlight {
+  animation: fillText .8s ease-out forwards;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  display: inline;
+}
+
+/* Floating Label Input */
+.relative input:focus + label {
+  top: 6px !important;
+  font-size: 12px !important;
+  color: #79BE76 !important;
+}
+
+.relative input:focus + label span {
+  font-size: 12px !important;
+  color: #79BE76 !important;
+}
+
+.relative input:focus {
+  border-color: #79BE76 !important;
+}
+
+/* When input has error */
+.relative input.border-2.border-\[\#ED1C24\] + label {
+  color: #ED1C24 !important;
+}
+
+.relative input.border-2.border-\[\#ED1C24\] + label span {
+  color: #ED1C24 !important;
+}
+
+/* Privacy text styling */
+.privacy-text a {
+  color: #ff007f;
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-text a:hover {
+  color: #FF007F;
+}

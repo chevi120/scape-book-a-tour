@@ -1,0 +1,9 @@
+@import url('https://db.onlinewebfonts.com/c/1bb03863edd76f9da018e68f113041f9?family=GT+Pressura+Pro+Regular');
+@import url('https://db.onlinewebfonts.com/c/fa6584b49f2dbb17b7483544bfa0b654?family=GT+Pressura+Pro+Bold');
+@import url('https://db.onlinewebfonts.com/c/bde64ed1422104421598829868974f43?family=Bariol+Regular');
+
+@import 'tailwindcss' source(none);
+@source '../../**/*.{js,ts,jsx,tsx}';
+@import 'tw-animate-css';
+@import './default_theme.css';
+@import './globals.css';
